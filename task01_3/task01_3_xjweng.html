@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="Beyond在校团队">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>任务三：三栏式布局</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+        }
+
+        body {
+            font: bold 15px "Microsoft YaHei", Helvetica, Arial, Sans;
+        }
+
+        div {
+            position: relative;
+            margin: 19px;
+            border: solid 1px #999;
+        }
+
+        .container {
+            position: relative;
+            overflow: hidden;  /*解决父元素无法包住浮动子元素*/
+            background-color: #eee;
+        }
+
+        
+        .container:after, .container:before {
+            clear: both;
+            content: " ";
+            display: block;
+        }
+
+        .container div {
+            background-color: white;
+        }
+
+        .container>.leftbar {
+            width: 200px;
+            position: relative;
+            float: left;
+        }
+
+        h4 {
+            margin-top: 21px;
+            text-align: center;
+
+        }
+
+        .container>.rightbar {
+            float: right;
+            width: 120px;
+        }
+        .middle {
+            overflow: hidden;    /*解决中间文字挡住两边*/
+            padding: 20px;
+            line-height: 2em;
+        }
+        .icon {
+            width: 80px;
+            height: 80px;
+        }
+
+        .leftbar>.icon {
+            float: left;
+        }
+        /*.rightbar>.icon {
+
+        }
+
+        .rightbar {
+
+        }*/
+        @media all and (max-width: 650px){
+            h4 {
+                font-size: 8vw;
+            }
+            .container > .leftbar {
+                margin-bottom: 0;
+            }
+            .container > div {
+                width: calc(100% - 40px) !important;
+                overflow: hidden;
+                margin: 19px;
+            }
+
+            .container > .middle {
+                width: calc(100% - 80px) !important;
+            }
+
+            .icon {
+                display: inline-block;
+                width: 80px;
+                height: 80px;
+                overflow: hidden;
+            }
+
+            .rightbar {
+                text-align: center;
+            }
+            .rightbar>.icon {
+                margin: 20px;
+            }
+            /*.container > .rightbar {
+                padding: 10px;
+            }*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="leftbar">
+            <div class="icon" style="background: url(images/uknow.png) no-repeat;background-size: cover;margin-right: 0"></div>
+            <h4>Beyond</h4>
+        </div>
+        <div class="rightbar">
+            <div class="icon" style="background: url(images/IMG_0908.JPG) no-repeat;background-size: cover"></div>
+            <div class="icon" style="background: url(images/IMG_0909.JPG) no-repeat;background-size: cover"></div>
+            <div class="icon" style="background: url(images/IMG_0910.JPG) no-repeat;background-size: cover"></div>
+            <div class="icon" style="background: url(images/IMG_0911.JPG) no-repeat;background-size: cover"></div>
+            <div class="icon" style="background: url(images/weng.jpg) no-repeat;background-size: cover"></div>
+        </div>
+        <div class="middle">
+            <h2>百度,ife,非在校团队,星际小队</h2>
+            <h3>张,星际,似水流年,awthink,零星落月</h3>
+            <address>
+                文章作者
+                <time>文章发表时间</time>
+            </address>
+            <p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<br/>换行了<br/>
+                这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<a
+                        href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，
+            </p>
+        </div>
+    </div>
+</body>
+</html>
